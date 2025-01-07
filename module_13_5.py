@@ -57,6 +57,8 @@ async def send_calories(message, state):
                          f'Вам нужно потреблять не более {calculator_calories} калорий')
     await state.finish()
 
+# Следующий хендлер перехватывает все остальные сообщения
+
 @dp.message_handler()
 async def start(message):
     await message.answer('Введите команду /start, чтобы начать общение.')
